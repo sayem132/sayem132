@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css?familly+Tangerine');
 
 *{
   padding: 0;
@@ -10,26 +9,42 @@
 body{
 
   font-family: monospace;
+  line-height: 1.6;
+  height: 100vh;
+
+}
+.container{
+  height: 100%;
+  width: 100%;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+
 }
 nav{
-  background: #0082e6;
-  height: 80px;
+
+  background: #ff0080;
+  height: 90px;
   width: 100%;
+  overflow: auto;
+
 }
 label.logo{
   color: white;
-  font-size: 35px;
-  line-height: 80px;
+  font-size: 40px;
+  line-height: 90px;
   padding: 0 100px;
   font-weight: bold;
 }
 nav ul{
   float: right;
-  margin-right: 20px;
+  margin-right: 25px
+
+
 }
 nav ul li{
   display: inline-block;
-  line-height: 80px;
+  line-height: 70px;
   margin: 0 5px;
 }
 nav ul li a{
@@ -38,9 +53,14 @@ nav ul li a{
   padding: 7px 13px;
   border-radius: 3px;
   text-transform: uppercase;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  color: #f4f4f4
 }
 a.active,a:hover{
-  background: blue;
+  background: rgb(183, 0, 255);
   transition: .5s;
 }
 .checkbtn{
@@ -84,6 +104,7 @@ a.active,a:hover{
     line-height: 30px;
   }
   nav ul li a{
+
     font-size: 20px;
   }
   a:hover,a.active{
@@ -96,15 +117,19 @@ a.active,a:hover{
 }
 section
 {
-  background: linear-gradient(#ffeb3b, #e91e63);
+  scroll-behavior: smooth;
+  background: linear-gradient(#ffeb3b, #ff0055);
   background-size: cover;
-  height: calc(100vh - 80px);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  align-items: center;
+  width: 100%;
+
 }
-section h2{
-  text-align: center;
-  font-size: 80px;
-  color: rgb(255, 0, 0)
-}
+
 section h2 span{
   font-size: 30px;
   font-family: sans-serif;
@@ -148,7 +173,7 @@ section h2 span{
  background-size: 1200px;
  z-index: 1;
  pointer-events: none;
- animation: animateReverse 30s linear infinite;
+ animation: animateReverse 20s linear infinite;
  opacity: 0.1;
 
 }
@@ -160,17 +185,30 @@ section h2 span{
   }
   100%
   {
-    background-position: 1600px;
+    background-position: -1600px;
   }
 }
 
 .particles-js-canvas-el
 {
-  top: 0;
-  left: 0;
+  top: 1%;
+  left: 0%;
   width: 100%;
   height: 100%;
 }
 
-
-
+section#Home {
+  background: linear-gradient(#ffeb3b, #e91e63) no-repeat center center/cover;
+}
+section#about {
+  background: linear-gradient(#ff0055, #ff6ecf) no-repeat center center/cover;
+}
+section#Game {
+  background: linear-gradient(#ff6ecf, #d0ff63) no-repeat center center/cover;
+}
+section#video {
+  background: linear-gradient(#d0ff63, #fc62b7) no-repeat center center/cover;
+}
+section#games1 {
+  background: linear-gradient(#fc62b7, #23e5ff) no-repeat center center/cover;
+}
